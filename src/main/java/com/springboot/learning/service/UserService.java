@@ -7,4 +7,6 @@ import com.springboot.learning.model.User;
 public interface UserService {
 
 	List<User> getAllUsers();
+	
+	User getUserDetails(long id);
 }

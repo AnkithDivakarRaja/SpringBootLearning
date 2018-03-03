@@ -25,6 +25,16 @@ public class UserServiceImpl implements UserService {
 		return users;
 	}
 
+	@Override
+	public User getUserDetails(long id) {
+		for(User user : users){
+            if(user.getId() == id){
+                return user;
+            }
+        }
+        return null;
+	}
+	
 	private static List<User> populateUsers(){
         List<User> users = new ArrayList<User>();
         users.add(new User(idCounter.incrementAndGet(),"Sam", "Log", 30, "3102 Kings Court", 70000));
@@ -33,5 +43,9 @@ public class UserServiceImpl implements UserService {
         users.add(new User(idCounter.incrementAndGet(),"Silvia", "Nanja", 50, "3104 Kings Court", 40000));
         return users;
     }
+
+
+	
+	
 	
 }
