@@ -15,6 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.springboot.learning.model.User;
 import com.springboot.learning.service.UserService;
+import com.springboot.learning.util.CustomError;
 
 @RestController
 @RequestMapping("/REST")
@@ -59,8 +60,8 @@ public class RestControllerApi {
 	        User currentUser = userService.getUserDetails(id);
 	 
 	        if (currentUser == null) {
-	            return new ResponseEntity<>("Unable to upate. User with id " + id + " not found.",
-	                    HttpStatus.NO_CONTENT);
+	            return new ResponseEntity<>(new CustomError("Unable to upate. User with id: " + id + " not found."),
+	                    HttpStatus.NOT_FOUND);
 	        }
 	 
 	        currentUser.setFirstName(user.getFirstName());

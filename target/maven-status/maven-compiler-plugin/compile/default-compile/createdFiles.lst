@@ -1,5 +1,6 @@
-com\springboot\learning\model\User.class
 com\springboot\learning\service\UserService.class
 com\springboot\learning\service\UserServiceImpl.class
 com\springboot\learning\SpringBootStart.class
 com\springboot\learning\controller\RestControllerApi.class
+com\springboot\learning\model\User.class
+com\springboot\learning\util\CustomError.class
