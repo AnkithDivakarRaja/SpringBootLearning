@@ -4,27 +4,27 @@ Developed a simple SpringBoot application to add, view, update and delete users.
 ### List of APIs
 
 1. Get Users:
-__url__: http://localhost:8080/REST/GetAllUsers
+__URL__: http://localhost:8080/REST/GetAllUsers
 
 ![ ](https://github.com/AnkithDivakarRaja/SpringBootLearning/blob/master/img/getAllUser.PNG)
 
 2. Add User :
-__url__: http://localhost:8080/REST/AddUser/
+__URL__: http://localhost:8080/REST/AddUser/
 
 ![ ](https://github.com/AnkithDivakarRaja/SpringBootLearning/blob/master/img/addUser.PNG)
 
 3. Get User Info :
-__url__: http://localhost:8080/REST/UserDetails/{id}
+__URL__: http://localhost:8080/REST/UserDetails/{id}
 
 ![ ](https://github.com/AnkithDivakarRaja/SpringBootLearning/blob/master/img/userDetails.PNG)
 
 4. Delete User :
-__url__: http://localhost:8080/REST/DeleteUser/{id}
+__URL__: http://localhost:8080/REST/DeleteUser/{id}
 
 ![ ](https://github.com/AnkithDivakarRaja/SpringBootLearning/blob/master/img/deleteUser.PNG)
 
 5. Update User :
-__url__: http://localhost:8080/REST/UserDetails/{id}
+__URL__: http://localhost:8080/REST/UserDetails/{id}
 
 ![ ](https://github.com/AnkithDivakarRaja/SpringBootLearning/blob/master/img/updateUser.PNG)
 
