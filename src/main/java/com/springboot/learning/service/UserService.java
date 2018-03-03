@@ -9,4 +9,8 @@ public interface UserService {
 	List<User> getAllUsers();
 	
 	User getUserDetails(long id);
+	
+	boolean isUserPresent(User user);
+	
+	void saveUser(User user);
 }
