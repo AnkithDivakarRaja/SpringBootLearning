@@ -13,4 +13,6 @@ public interface UserService {
 	boolean isUserPresent(User user);
 	
 	void saveUser(User user);
+	
+	void updateUser(User user); 
 }

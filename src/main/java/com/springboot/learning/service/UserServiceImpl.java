@@ -45,10 +45,17 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 	
+	@Override
 	public void saveUser(User user) {
 		user.setId(idCounter.incrementAndGet());
 		users.add(user);
 	}
+	
+	@Override
+	public void updateUser(User user) {
+        int index = users.indexOf(user);
+        users.set(index, user);
+    }
 	
 	private static List<User> populateUsers(){
         List<User> users = new ArrayList<User>();

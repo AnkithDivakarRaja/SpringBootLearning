@@ -52,4 +52,24 @@ public class RestControllerApi {
         headers.setLocation(uriBuilder.path("/REST/UserDetails/{id}").buildAndExpand(user.getId()).toUri());
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
 	}
+	
+	 @RequestMapping(value = "/UserDetails/{id}", method = RequestMethod.PUT)
+	    public ResponseEntity<?> updateUser(@PathVariable("id") long id, @RequestBody User user) {
+	        
+	        User currentUser = userService.getUserDetails(id);
+	 
+	        if (currentUser == null) {
+	            return new ResponseEntity<>("Unable to upate. User with id " + id + " not found.",
+	                    HttpStatus.NO_CONTENT);
+	        }
+	 
+	        currentUser.setFirstName(user.getFirstName());
+	        currentUser.setLastName(user.getLastName());
+	        currentUser.setAddress(user.getAddress());
+	        currentUser.setAge(user.getAge());
+	        currentUser.setSalary(user.getSalary());
+	 
+	        userService.updateUser(currentUser);
+	        return new ResponseEntity<User>(currentUser, HttpStatus.OK);
+	    }
 }
