@@ -57,6 +57,11 @@ public class UserServiceImpl implements UserService {
         users.set(index, user);
     }
 	
+	@Override
+	public void deleteUser(User user) {
+		users.remove(user);
+	}
+	
 	private static List<User> populateUsers(){
         List<User> users = new ArrayList<User>();
         users.add(new User(idCounter.incrementAndGet(),"Sam", "Log", 30, "3102 Kings Court", 70000));
